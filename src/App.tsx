@@ -1,30 +1,27 @@
-import CountBtn from "@/components/count-btn";
-import ReactSVG from "@/assets/react.svg";
-import { Badge } from "@/components/ui/badge";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "./components/mode-toggle";
+import { BrowserRouter, Routes, Route } from "react-router";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <main className="flex flex-col items-center justify-center h-screen">
-        <div className="flex flex-col items-center gap-y-4">
-          <div className="inline-flex items-center gap-x-4">
-            <img src={ReactSVG} alt="React Logo" className="w-32" />
-            <span className="text-6xl">+</span>
-            <img src={"/vite.svg"} alt="Vite Logo" className="w-32" />
-          </div>
-          <a
-            href="https://ui.shadcn.com"
-            rel="noopener noreferrer nofollow"
-            target="_blank"
-          >
-            <Badge variant="outline">shadcn/ui</Badge>
-          </a>
-          <CountBtn />
-          <ModeToggle />
-        </div>
-      </main>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<HomePage />} />
+          {/* <Route path="about" element={<About />} /> */}
+
+          {/* <Route element={<AuthLayout />}>
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+          </Route>
+
+          <Route path="concerts">
+            <Route index element={<ConcertsHome />} />
+            <Route path=":city" element={<City />} />
+            <Route path="trending" element={<Trending />} />
+          </Route> */}
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
