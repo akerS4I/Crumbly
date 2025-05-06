@@ -26,6 +26,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Link } from "react-router";
 
 const Navbar5 = () => {
   const features = [
@@ -57,9 +58,9 @@ const Navbar5 = () => {
         <nav className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-2">
             <img src="/cookie.png" className="max-h-8" alt="" />
-            <span className="text-3xl font-semibold tracking-tighter">
+            <Link to="/" className="text-3xl font-semibold tracking-tighter">
               Crumbly
-            </span>
+            </Link>
           </a>
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
@@ -72,12 +73,14 @@ const Navbar5 = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#"
-                  className={navigationMenuTriggerStyle() + " text-base"}
-                >
-                  Про нас
-                </NavigationMenuLink>
+                <Link to="/about">
+                  <NavigationMenuLink
+                    href="#"
+                    className={navigationMenuTriggerStyle() + " text-base"}
+                  >
+                    Про нас
+                  </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
@@ -115,7 +118,9 @@ const Navbar5 = () => {
             </NavigationMenuList>
           </NavigationMenu>
           <div className="hidden items-center gap-4 lg:flex">
-            <Button variant="outline">Войти в аккаунт</Button>
+            <Button variant="outline">
+              <Link to="/login">Войти в аккаунт</Link>
+            </Button>
             <Button>Зарегистрироваться</Button>
             <ModeToggle />
           </div>
@@ -134,9 +139,12 @@ const Navbar5 = () => {
                       className="max-h-8"
                       alt="Shadcn UI Navbar"
                     />
-                    <span className="text-2xl font-semibold tracking-tighter">
+                    <Link
+                      to="/"
+                      className="text-2xl font-semibold tracking-tighter"
+                    >
                       Crumbly
-                    </span>
+                    </Link>
                   </a>
                 </SheetTitle>
               </SheetHeader>
@@ -172,16 +180,18 @@ const Navbar5 = () => {
                   <a href="#" className="font-medium">
                     Контакт
                   </a>
-                  <a href="#" className="font-medium">
+                  <Link to="/about" className="font-medium">
                     Про нас
-                  </a>
+                  </Link>
                   <a href="#" className="font-medium">
                     Заказать
                   </a>
                   <ModeToggle />
                 </div>
                 <div className="mt-6 flex flex-col gap-4">
-                  <Button variant="outline">Войти в аккаунт</Button>
+                  <Button variant="outline">
+                    <Link to="/login">Войти в аккаунт</Link>
+                  </Button>
                   <Button>Зарегистрироваться</Button>
                 </div>
               </div>
