@@ -1,6 +1,8 @@
 import { ThemeProvider } from "@/components/theme-provider";
 import { BrowserRouter, Routes, Route } from "react-router";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -8,12 +10,10 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route index element={<HomePage />} />
-          {/* <Route path="about" element={<About />} /> */}
-
-          {/* <Route element={<AuthLayout />}>
-            <Route path="login" element={<Login />} />
-            <Route path="register" element={<Register />} />
-          </Route>
+          <Route path="about" element={<AboutPage />} />
+          <Route path="login" element={<LoginPage />} />
+          {/* <Route path="register" element={<Register />} /> */}
+          {/* 
 
           <Route path="concerts">
             <Route index element={<ConcertsHome />} />
