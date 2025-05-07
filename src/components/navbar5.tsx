@@ -63,19 +63,25 @@ const Navbar5 = () => {
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <Link to="/order" className={`${navigationMenuTriggerStyle()} !text-base`}
+                <Link
+                  to="/order"
+                  className={`${navigationMenuTriggerStyle()} !text-base`}
                 >
                   Заказать
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link to="/about" className={`${navigationMenuTriggerStyle()} !text-base`}
+                <Link
+                  to="/about"
+                  className={`${navigationMenuTriggerStyle()} !text-base`}
                 >
                   Про нас
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link to="/contact" className={`${navigationMenuTriggerStyle()} !text-base`}
+                <Link
+                  to="/contact"
+                  className={`${navigationMenuTriggerStyle()} !text-base`}
                 >
                   Контакты
                 </Link>
@@ -108,12 +114,14 @@ const Navbar5 = () => {
             </NavigationMenuList>
           </NavigationMenu>
           <div className="hidden items-center gap-4 lg:flex">
-            <Button variant="outline" className="text-base">
-              <Link to="/login">Войти в аккаунт</Link>
-            </Button>
-            <Button className="text-base">
-              <Link to="/register">Зарегистрироваться</Link>
-            </Button>
+            <Link to="/login">
+              <Button variant="outline" className="text-base">
+                Войти в аккаунт
+              </Button>
+            </Link>
+            <Link to="/register">
+              <Button className="text-base">Зарегистрироваться</Button>
+            </Link>
             <ModeToggle />
           </div>
           <Sheet>
@@ -126,7 +134,11 @@ const Navbar5 = () => {
               <SheetHeader>
                 <SheetTitle>
                   <Link to="/" className="flex items-center gap-2">
-                    <img src="/cookie.png" className="max-h-8" alt="Shadcn UI Navbar" />
+                    <img
+                      src="/cookie.png"
+                      className="max-h-8"
+                      alt="Shadcn UI Navbar"
+                    />
                     <span className="text-2xl font-semibold tracking-tighter">
                       Crumbly
                     </span>
