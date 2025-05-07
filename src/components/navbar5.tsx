@@ -2,7 +2,6 @@
 
 import { MenuIcon } from "lucide-react";
 import { ModeToggle } from "@/components/mode-toggle";
-
 import {
   Accordion,
   AccordionContent,
@@ -14,7 +13,6 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
@@ -33,22 +31,22 @@ const Navbar5 = () => {
     {
       title: "Android приложение",
       description: "Заказывайте свежую выпечку с телефона!",
-      href: "#",
+      href: "/android",
     },
     {
       title: "Аналитика",
       description: "Следите за продажами",
-      href: "#",
+      href: "/analytics",
     },
     {
       title: "Telegram бот",
       description: "Теперь можно закупаться и в любимом мессенджере",
-      href: "#",
+      href: "/telegram",
     },
     {
       title: "Поддержка",
       description: "Получите помощь когда понадобится",
-      href: "#",
+      href: "/support",
     },
   ];
 
@@ -56,39 +54,31 @@ const Navbar5 = () => {
     <section className="py-4">
       <div className="container">
         <nav className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <img src="/cookie.png" className="max-h-8" alt="" />
-            <Link to="/" className="text-3xl font-semibold tracking-tighter">
+            <span className="text-3xl font-semibold tracking-tighter">
               Crumbly
-            </Link>
-          </a>
+            </span>
+          </Link>
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#"
-                  className={navigationMenuTriggerStyle() + " text-base"}
+                <Link to="/order" className={`${navigationMenuTriggerStyle()} !text-base`}
                 >
                   Заказать
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link to="/about">
-                  <NavigationMenuLink
-                    href="#"
-                    className={navigationMenuTriggerStyle() + " text-base"}
-                  >
-                    Про нас
-                  </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="#"
-                  className={navigationMenuTriggerStyle() + " text-base"}
+                <Link to="/about" className={`${navigationMenuTriggerStyle()} !text-base`}
+                >
+                  Про нас
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/contact" className={`${navigationMenuTriggerStyle()} !text-base`}
                 >
                   Контакты
-                </NavigationMenuLink>
+                </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-base">
@@ -97,12 +87,12 @@ const Navbar5 = () => {
                 <NavigationMenuContent>
                   <div className="grid w-[600px] grid-cols-2 p-3">
                     {features.map((feature, index) => (
-                      <NavigationMenuLink
-                        href={feature.href}
+                      <Link
+                        to={feature.href}
                         key={index}
                         className="rounded-md p-3 transition-colors hover:bg-muted/70"
                       >
-                        <div key={feature.title}>
+                        <div>
                           <p className="mb-1 font-semibold text-foreground">
                             {feature.title}
                           </p>
@@ -110,7 +100,7 @@ const Navbar5 = () => {
                             {feature.description}
                           </p>
                         </div>
-                      </NavigationMenuLink>
+                      </Link>
                     ))}
                   </div>
                 </NavigationMenuContent>
@@ -118,10 +108,12 @@ const Navbar5 = () => {
             </NavigationMenuList>
           </NavigationMenu>
           <div className="hidden items-center gap-4 lg:flex">
-            <Button variant="outline">
+            <Button variant="outline" className="text-base">
               <Link to="/login">Войти в аккаунт</Link>
             </Button>
-            <Button>Зарегистрироваться</Button>
+            <Button className="text-base">
+              <Link to="/register">Зарегистрироваться</Link>
+            </Button>
             <ModeToggle />
           </div>
           <Sheet>
@@ -133,36 +125,29 @@ const Navbar5 = () => {
             <SheetContent side="top" className="max-h-screen overflow-auto">
               <SheetHeader>
                 <SheetTitle>
-                  <a href="#" className="flex items-center gap-2">
-                    <img
-                      src="/cookie.png"
-                      className="max-h-8"
-                      alt="Shadcn UI Navbar"
-                    />
-                    <Link
-                      to="/"
-                      className="text-2xl font-semibold tracking-tighter"
-                    >
+                  <Link to="/" className="flex items-center gap-2">
+                    <img src="/cookie.png" className="max-h-8" alt="Shadcn UI Navbar" />
+                    <span className="text-2xl font-semibold tracking-tighter">
                       Crumbly
-                    </Link>
-                  </a>
+                    </span>
+                  </Link>
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col p-4">
                 <Accordion type="single" collapsible className="mt-4 mb-2">
                   <AccordionItem value="solutions" className="border-none">
                     <AccordionTrigger className="text-base hover:no-underline">
-                      Допольнительно
+                      Дополнительно
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="grid md:grid-cols-2">
                         {features.map((feature, index) => (
-                          <a
-                            href={feature.href}
+                          <Link
+                            to={feature.href}
                             key={index}
                             className="rounded-md p-3 transition-colors hover:bg-muted/70"
                           >
-                            <div key={feature.title}>
+                            <div>
                               <p className="mb-1 font-semibold text-foreground">
                                 {feature.title}
                               </p>
@@ -170,29 +155,31 @@ const Navbar5 = () => {
                                 {feature.description}
                               </p>
                             </div>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
                 <div className="flex flex-col gap-6">
-                  <a href="#" className="font-medium">
+                  <Link to="/contact" className="font-medium">
                     Контакт
-                  </a>
+                  </Link>
                   <Link to="/about" className="font-medium">
                     Про нас
                   </Link>
-                  <a href="#" className="font-medium">
+                  <Link to="/order" className="font-medium">
                     Заказать
-                  </a>
+                  </Link>
                   <ModeToggle />
                 </div>
                 <div className="mt-6 flex flex-col gap-4">
                   <Button variant="outline">
                     <Link to="/login">Войти в аккаунт</Link>
                   </Button>
-                  <Button>Зарегистрироваться</Button>
+                  <Button>
+                    <Link to="/register">Зарегистрироваться</Link>
+                  </Button>
                 </div>
               </div>
             </SheetContent>
