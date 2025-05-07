@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link } from "react-router";
 
-export function LoginForm({
+export function SignupForm({
   className,
   ...props
 }: React.ComponentPropsWithoutRef<"div">) {
@@ -19,9 +19,9 @@ export function LoginForm({
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Войти в аккаунт</CardTitle>
+          <CardTitle className="text-2xl">Создать аккаунт</CardTitle>
           <CardDescription>
-            Введите свою электронную почту что бы войти в свой аккаунт
+            Введите свои данные ниже что бы создать аккаунт
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -39,26 +39,20 @@ export function LoginForm({
               <div className="grid gap-2">
                 <div className="flex items-center">
                   <Label htmlFor="password">Пароль</Label>
-                  <a
-                    href="#"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                  >
-                    Забыли пароль?
-                  </a>
                 </div>
                 <Input id="password" type="password" required />
               </div>
               <Button type="submit" className="w-full">
-                Войти
+                Создать аккаунт
               </Button>
               <Button variant="outline" className="w-full">
-                Войти при помощи Google
+                Создать аккаунт при помощи Google
               </Button>
             </div>
             <div className="mt-4 text-center text-sm">
-              Не зарегестрированы?{" "}
-              <Link to="/register" className="underline underline-offset-4">
-                Создать аккаунт
+              Уже зарегестрированы?{" "}
+              <Link to="/login" className="underline underline-offset-4">
+                Войти в аккаунт
               </Link>
             </div>
           </form>
