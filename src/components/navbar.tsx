@@ -26,7 +26,7 @@ import {
 } from "@/components/ui/sheet";
 import { Link } from "react-router";
 
-const Navbar5 = () => {
+const Navbar = () => {
   const features = [
     {
       title: "Android приложение",
@@ -44,9 +44,9 @@ const Navbar5 = () => {
       href: "/telegram",
     },
     {
-      title: "Поддержка",
-      description: "Получите помощь когда понадобится",
-      href: "/support",
+      title: "Наша команда",
+      description: "Узнайте больше о создателях сервиса",
+      href: "/team",
     },
   ];
 
@@ -56,7 +56,7 @@ const Navbar5 = () => {
         <nav className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <img src="/cookie.png" className="max-h-8" alt="" />
-            <span className="text-3xl font-semibold tracking-tighter">
+            <span className="text-4xl font-semibold tracking-tighter">
               Crumbly
             </span>
           </Link>
@@ -137,7 +137,7 @@ const Navbar5 = () => {
                     <img
                       src="/cookie.png"
                       className="max-h-8"
-                      alt="Shadcn UI Navbar"
+                      alt=""
                     />
                     <span className="text-2xl font-semibold tracking-tighter">
                       Crumbly
@@ -202,4 +202,4 @@ const Navbar5 = () => {
   );
 };
 
-export { Navbar5 };
+export { Navbar };
