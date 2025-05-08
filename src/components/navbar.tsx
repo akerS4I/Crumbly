@@ -64,10 +64,10 @@ const Navbar = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <Link
-                  to="/order"
+                  to="/"
                   className={`${navigationMenuTriggerStyle()} !text-base`}
                 >
-                  Заказать
+                  На главную
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
@@ -146,7 +146,10 @@ const Navbar = () => {
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col p-4">
-                <Accordion type="single" collapsible className="mt-4 mb-2">
+                  <Link to="/" className="font-medium mt-4">
+                    На главную
+                  </Link>
+                <Accordion type="single" collapsible className="mt-2 mb-2">
                   <AccordionItem value="solutions" className="border-none">
                     <AccordionTrigger className="text-base hover:no-underline">
                       Дополнительно
@@ -179,9 +182,6 @@ const Navbar = () => {
                   </Link>
                   <Link to="/about" className="font-medium">
                     Про нас
-                  </Link>
-                  <Link to="/order" className="font-medium">
-                    Заказать
                   </Link>
                   <ModeToggle />
                 </div>
