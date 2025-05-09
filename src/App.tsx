@@ -17,7 +17,6 @@ function App() {
           <Route path="register" element={<SignupPage />} />
           <Route path="contact" element={<ContactPage />} />
           {/* 
-
           <Route path="concerts">
             <Route index element={<ConcertsHome />} />
             <Route path=":city" element={<City />} />
