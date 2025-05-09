@@ -134,11 +134,7 @@ const Navbar = () => {
               <SheetHeader>
                 <SheetTitle>
                   <Link to="/" className="flex items-center gap-2">
-                    <img
-                      src="/cookie.png"
-                      className="max-h-8"
-                      alt=""
-                    />
+                    <img src="/cookie.png" className="max-h-8" alt="" />
                     <span className="text-2xl font-semibold tracking-tighter">
                       Crumbly
                     </span>
@@ -146,9 +142,9 @@ const Navbar = () => {
                 </SheetTitle>
               </SheetHeader>
               <div className="flex flex-col p-4">
-                  <Link to="/" className="font-medium mt-4">
-                    На главную
-                  </Link>
+                <Link to="/" className="font-medium mt-4">
+                  На главную
+                </Link>
                 <Accordion type="single" collapsible className="mt-2 mb-2">
                   <AccordionItem value="solutions" className="border-none">
                     <AccordionTrigger className="text-base hover:no-underline">
