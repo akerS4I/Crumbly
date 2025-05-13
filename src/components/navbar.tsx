@@ -25,28 +25,29 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Link } from "react-router";
+import { FaShoppingCart } from "react-icons/fa";
 
 const Navbar = () => {
   const features = [
     {
       title: "Android приложение",
       description: "Заказывайте свежую выпечку с телефона!",
-      href: "/android",
+      href: "/",
     },
     {
       title: "Аналитика",
       description: "Следите за продажами",
-      href: "/analytics",
+      href: "/",
     },
     {
       title: "Telegram бот",
-      description: "Теперь можно закупаться и в любимом мессенджере",
-      href: "/telegram",
+      description: "Теперь можно заказывать и в любимом мессенджере",
+      href: "/",
     },
     {
       title: "Наша команда",
       description: "Узнайте больше о создателях сервиса",
-      href: "/team",
+      href: "/",
     },
   ];
 
@@ -55,10 +56,15 @@ const Navbar = () => {
       <div className="container">
         <nav className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/cookie.png" className="max-h-8" alt="" />
-            <span className="text-4xl font-semibold tracking-tighter">
-              Crumbly
-            </span>
+            <img
+              src="/crumblymain.png"
+              className="max-w-44 sm:max-w-44 lg:max-w-60"
+              alt=""
+            />
+            {/* <img src="/Yulduz.png" className="max-h-20 lg:max-h-20" alt="" />
+            <span className="text-4xl font-medium tracking-tighter">
+                Crumbly
+            </span> */}
           </Link>
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
@@ -123,6 +129,13 @@ const Navbar = () => {
               <Button className="text-base">Зарегистрироваться</Button>
             </Link>
             <ModeToggle />
+            <Link to="/cart">
+              <Button
+                className="text-black"
+              >
+                <FaShoppingCart />
+              </Button>
+            </Link>
           </div>
           <Sheet>
             <SheetTrigger asChild className="lg:hidden">
@@ -178,6 +191,9 @@ const Navbar = () => {
                   </Link>
                   <Link to="/about" className="font-medium">
                     Про нас
+                  </Link>
+                  <Link to="/about" className="font-medium">
+                    Корзина
                   </Link>
                   <ModeToggle />
                 </div>

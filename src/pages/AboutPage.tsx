@@ -68,7 +68,11 @@ const AboutPage = () => {
           вкусной выпечки
         </p>
       </header>
-
+      <section className="flex flex-col items-center justify-center px-4 sm:px-8 lg:px-20 mt-10 gap-6 mb-32">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center">Сервис сделанный с душой</h1>
+        <img src="Yulduz.png" alt="" className="max-h-64" />
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center">от людей и для людей</h1>
+      </section>
       <section className="flex flex-col items-center justify-center px-4 sm:px-8 lg:px-20 mt-20">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center">
           Как это работает?
@@ -78,7 +82,10 @@ const AboutPage = () => {
           <Card className="w-full sm:w-80 md:w-96">
             <CardHeader className="flex items-center justify-center">
               <CardTitle>
-                <FaUser className="size-16 text-black dark:text-white" />
+                <FaUser
+                  style={{ color: "currentColor" }}
+                  className="size-16 text-black dark:text-white"
+                />
               </CardTitle>
             </CardHeader>
             <CardContent className="font-semibold text-xl text-center">
@@ -95,7 +102,10 @@ const AboutPage = () => {
           <Card className="w-full sm:w-80 md:w-96">
             <CardHeader className="flex items-center justify-center">
               <CardTitle>
-                <FaShoppingCart className="size-16 text-black dark:text-white" />
+                <FaShoppingCart
+                  style={{ color: "currentColor" }}
+                  className="size-16 text-black dark:text-white"
+                />
               </CardTitle>
             </CardHeader>
             <CardContent className="font-semibold text-xl text-center">
@@ -112,7 +122,10 @@ const AboutPage = () => {
           <Card className="w-full sm:w-80 md:w-96">
             <CardHeader className="flex items-center justify-center">
               <CardTitle>
-                <FaTruck className="size-16 text-black dark:text-white" />
+                <FaTruck
+                  style={{ color: "currentColor" }}
+                  className="size-16 text-black dark:text-white"
+                />
               </CardTitle>
             </CardHeader>
             <CardContent className="font-semibold text-xl text-center">
