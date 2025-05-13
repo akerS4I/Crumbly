@@ -192,7 +192,7 @@ const Navbar = () => {
                   <Link to="/about" className="font-medium">
                     Про нас
                   </Link>
-                  <Link to="/about" className="font-medium">
+                  <Link to="/cart" className="font-medium underline decoration-yellow-400 decoration-2">
                     Корзина
                   </Link>
                   <ModeToggle />
