@@ -129,7 +129,8 @@ const Menu = () => {
       {items.map((item) => (
         <div
           key={item.id}
-          className="w-80 p-4 flex flex-col items-center justify-between bg-yellow-300 bg-opacity-40 rounded-lg"
+          className="w-80 p-4 flex flex-col items-center justify-between border-border border-4 bg-opacity-40 rounded-lg"
+          style = { { color: "currentColor" } }
         >
           <img
             src={item.img}
