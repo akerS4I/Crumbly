@@ -151,8 +151,12 @@ const Menu = () => {
       {items.map((item) => (
         <div
           key={item.id}
-          className="w-80 p-4 flex flex-col items-center justify-between border-border border-4 bg-opacity-40 rounded-lg gap-1"
-          style={{ color: "currentColor" }}
+          className="w-80 p-4 flex flex-col items-center justify-between rounded-lg gap-1 bg-white dark:bg-zinc-800"
+          style={{
+            background: "var(--background)",
+            boxShadow:
+              "0 4px 12px rgba(0, 0, 0, 0.1), inset 0 0 6px rgba(255, 255, 255, 0.3)",
+          }}
         >
           <img
             src={item.img}
@@ -177,23 +181,25 @@ const Menu = () => {
               {item.rating.toFixed(1)}
             </span>
           </div>
-          <h1>{item.price}</h1>
+          <h1 className="text-lg">{item.price}</h1>
           {/* Кол-во + кнопки */}
           <div className="flex items-center justify-center gap-2 mt-4">
             <Button
               variant="outline"
               size="sm"
               onClick={() => handleQuantityChange(item.id, -1)}
+              className="rounded-full flex items-center content-center text-lg"
             >
               -
             </Button>
-            <span className="px-2 w-6 text-center">
+            <span className="px-2 w-6 text-center ">
               {quantities[item.id] || 1}
             </span>
             <Button
               variant="outline"
               size="sm"
               onClick={() => handleQuantityChange(item.id, 1)}
+              className="rounded-full"
             >
               +
             </Button>
