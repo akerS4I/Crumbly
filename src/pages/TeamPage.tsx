@@ -6,7 +6,7 @@ const teamMembers = [
   {
     name: "Игамбердиев Асадулла",
     role: "Веб разработчик",
-    image: "src/assets/head/Asadulla.jpg",
+    image: "head/Asadulla.jpg",
     socials: {
       github: "https://github.com/asadulla",
       linkedin: "https://linkedin.com/in/asadulla",
@@ -17,7 +17,7 @@ const teamMembers = [
   {
     name: "Кузин Михаил",
     role: "Python разработчик",
-    image: "src/assets/head/Michael.jpg",
+    image: "head/Michael.jpg",
     socials: {
       github: "https://github.com/zaynab",
       linkedin: "https://linkedin.com/in/zaynab",
@@ -28,7 +28,7 @@ const teamMembers = [
   {
     name: "Зокирходжаева Робия",
     role: "UI/UX дизайнер",
-    image: "src/assets/head/Robiya.jpg",
+    image: "head/Robiya.jpg",
     socials: {
       github: "https://github.com/zaynab",
       linkedin: "https://linkedin.com/in/zaynab",
