@@ -67,11 +67,18 @@ const AboutPage = () => {
           Платформа, объединяющая талантливых домашних кондитеров и ценителей
           вкусной выпечки
         </p>
+        <p className="text-sm sm:text-sx lg:text-md text-gray-600 dark:text-gray-200 mt-1">
+          P.s (При создании проекта ни один Захар не пострадал)
+        </p>
       </header>
       <section className="flex flex-col items-center justify-center px-4 sm:px-8 lg:px-20 mt-10 gap-6 mb-32">
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center">Сервис сделанный с душой</h1>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center">
+          Сервис сделанный с душой
+        </h1>
         <img src="Yulduz.png" alt="" className="max-h-64" />
-        <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center">от людей и для людей</h1>
+        <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-center">
+          от людей и для людей
+        </h1>
       </section>
       <section className="flex flex-col items-center justify-center px-4 sm:px-8 lg:px-20 mt-20">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center">
