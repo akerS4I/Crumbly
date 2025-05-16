@@ -14,6 +14,7 @@ import croissant from "../assets/menu-items/10.jpg";
 import tartlets from "../assets/menu-items/11.jpg";
 import carrotCake from "../assets/menu-items/12.jpg";
 import { addToCart } from "@/store/cartSlice";
+import { toast } from "sonner";
 
 const items = [
   {
@@ -21,14 +22,18 @@ const items = [
     title: "Печенье с шоколадной крошкой",
     img: cookie,
     rating: 4.8,
-    description: "Хрустящее печенье с тающей шоколадной крошкой — идеальный перекус.",
+    description:
+      "Хрустящее печенье с тающей шоколадной крошкой — идеальный перекус.",
+    price: "5 000 сум",
   },
   {
     id: 2,
     title: "Классический торт Медовик",
     img: medovik,
     rating: 5.0,
-    description: "Нежный многослойный медовик с насыщенным вкусом меда и сливок.",
+    description:
+      "Нежный многослойный медовик с насыщенным вкусом меда и сливок.",
+    price: "80 000 сум",
   },
   {
     id: 3,
@@ -36,6 +41,7 @@ const items = [
     img: blueberryMuffin,
     rating: 4.7,
     description: "Воздушные маффины с сочной черникой и хрустящей шапочкой.",
+    price: "10 000 сум",
   },
   {
     id: 4,
@@ -43,6 +49,7 @@ const items = [
     img: applePie,
     rating: 4.9,
     description: "Домашний пирог с яблоками, корицей и хрустящей корочкой.",
+    price: "120 000 сум",
   },
   {
     id: 5,
@@ -50,6 +57,7 @@ const items = [
     img: tiramisu,
     rating: 5.0,
     description: "Классический итальянский десерт с кремом маскарпоне и кофе.",
+    price: "90 000 сум",
   },
   {
     id: 6,
@@ -57,6 +65,7 @@ const items = [
     img: eclairs,
     rating: 4.6,
     description: "Нежные эклеры с ароматным ванильным заварным кремом.",
+    price: "10 000 сум",
   },
   {
     id: 7,
@@ -64,6 +73,7 @@ const items = [
     img: brownie,
     rating: 4.8,
     description: "Плотный и насыщенный шоколадный десерт с хрустящей корочкой.",
+    price: "8 000 сум",
   },
   {
     id: 8,
@@ -71,6 +81,7 @@ const items = [
     img: cheesecake,
     rating: 5.0,
     description: "Кремовый чизкейк на хрустящей основе, украшенный ягодами.",
+    price: "95 000 сум",
   },
   {
     id: 9,
@@ -78,6 +89,7 @@ const items = [
     img: donuts,
     rating: 4.5,
     description: "Мягкие пончики с начинкой из варенья и сахарной пудрой.",
+    price: "12 000 сум",
   },
   {
     id: 10,
@@ -85,6 +97,7 @@ const items = [
     img: croissant,
     rating: 4.7,
     description: "Золотистые круассаны с маслом или шоколадной начинкой.",
+    price: "15 000 сум",
   },
   {
     id: 11,
@@ -92,16 +105,18 @@ const items = [
     img: tartlets,
     rating: 4.9,
     description: "Мини-десерты с заварным кремом и свежими сезонными ягодами.",
+    price: "5 000 сум",
   },
   {
     id: 12,
     title: "Морковный торт",
     img: carrotCake,
     rating: 4.6,
-    description: "Влажный торт с морковью, орехами и кремом из сливочного сыра.",
+    description:
+      "Влажный торт с морковью, орехами и кремом из сливочного сыра.",
+    price: "90 000 сум",
   },
 ];
-
 
 const Menu = () => {
   const dispatch = useDispatch();
@@ -114,23 +129,30 @@ const Menu = () => {
     }));
   };
 
+  const parsePrice = (price: string) => {
+    return parseInt(price.replace(/\D/g, ""), 10);
+  };
+
   const handleAddToCart = (item: (typeof items)[number]) => {
     const quantity = quantities[item.id] || 1;
     dispatch(
       addToCart({
         ...item,
         quantity,
+        price: parsePrice(item.price),
       })
     );
+
+    toast.success(`${item.title} x${quantity} добавлен(ы) в корзину`);
   };
 
   return (
-    <div className="flex flex-wrap gap-7 p-7">
+    <div className="flex flex-wrap gap-14 p-7">
       {items.map((item) => (
         <div
           key={item.id}
-          className="w-80 p-4 flex flex-col items-center justify-between border-border border-4 bg-opacity-40 rounded-lg"
-          style = { { color: "currentColor" } }
+          className="w-80 p-4 flex flex-col items-center justify-between border-border border-4 bg-opacity-40 rounded-lg gap-1"
+          style={{ color: "currentColor" }}
         >
           <img
             src={item.img}
@@ -155,7 +177,7 @@ const Menu = () => {
               {item.rating.toFixed(1)}
             </span>
           </div>
-
+          <h1>{item.price}</h1>
           {/* Кол-во + кнопки */}
           <div className="flex items-center justify-center gap-2 mt-4">
             <Button

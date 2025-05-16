@@ -30,24 +30,24 @@ import { FaShoppingCart } from "react-icons/fa";
 const Navbar = () => {
   const features = [
     {
-      title: "Android приложение",
-      description: "Заказывайте свежую выпечку с телефона!",
-      href: "/",
+      title: "Видео-Презентация",
+      description: "Окунитесь в разработку нашего сайта с головой просмотрев короткое видео",
+      href: "/video",
     },
     {
-      title: "Аналитика",
-      description: "Следите за продажами",
-      href: "/",
+      title: "Github Репозиторий",
+      description: "Взгяните на код и то как двигалась разработка сайта",
+      href: "https://github.com/akerS4I/Crumbly",
     },
     {
-      title: "Telegram бот",
+      title: "Telegram Бот",
       description: "Теперь можно заказывать и в любимом мессенджере",
-      href: "/",
+      href: "https://t.me/Crumbly_Off_Bot",
     },
     {
-      title: "Наша команда",
+      title: "Наша Команда",
       description: "Узнайте больше о создателях сервиса",
-      href: "/",
+      href: "/team",
     },
   ];
 
@@ -61,10 +61,6 @@ const Navbar = () => {
               className="max-w-44 sm:max-w-44 lg:max-w-60"
               alt=""
             />
-            {/* <img src="/Yulduz.png" className="max-h-20 lg:max-h-20" alt="" />
-            <span className="text-4xl font-medium tracking-tighter">
-                Crumbly
-            </span> */}
           </Link>
           <NavigationMenu className="hidden lg:block">
             <NavigationMenuList>
