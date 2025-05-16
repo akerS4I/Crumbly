@@ -9,7 +9,7 @@ const teamMembers = [
     image: "head/Asadulla.jpg",
     socials: {
       github: "https://github.com/asadulla",
-      linkedin: "https://linkedin.com/in/asadulla",
+      instagram: "https://www.instagram.com/akeraminai_sai/",
       telegram: "https://t.me/akeraminai",
     },
     contribution: "Приложил много труда и времени создавая для вас этот прекрасный вебсайт",
@@ -19,8 +19,8 @@ const teamMembers = [
     role: "Python разработчик",
     image: "head/Michael.jpg",
     socials: {
-      github: "https://github.com/zaynab",
-      linkedin: "https://linkedin.com/in/zaynab",
+      github: "https://github.com/Michael9Kuzin",
+      instagram: "https://www.instagram.com/k_misha.nya/",
       telegram: "https://t.me/k_misha_nya",
     },
     contribution: "Работал над созданием для нашей платформы телеграмм бота со встроенным веб приложением",
@@ -30,9 +30,9 @@ const teamMembers = [
     role: "UI/UX дизайнер",
     image: "head/Robiya.jpg",
     socials: {
-      github: "https://github.com/zaynab",
-      linkedin: "https://linkedin.com/in/zaynab",
-      telegram: "https://twitter.com/zaynab",
+      github: "https://github.com/Rubi5836",
+      instagram: "https://www.instagram.com/robii.khodjaevaa/",
+      telegram: "https://t.me/weymiii",
     },
     contribution: "Упорно трудилась создавая для вас прекрасный дизайн нашей платформы",
   },
@@ -64,8 +64,8 @@ const TeamPage = () => {
                     <FaGithub />
                   </a>
                 )}
-                {member.socials.linkedin && (
-                  <a href={member.socials.linkedin} target="_blank" rel="noopener noreferrer">
+                {member.socials.instagram && (
+                  <a href={member.socials.instagram} target="_blank" rel="noopener noreferrer">
                     <FaInstagram />
                   </a>
                 )}
