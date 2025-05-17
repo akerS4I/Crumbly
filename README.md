@@ -1,6 +1,8 @@
 # Crumbly Project
 
-Project in development stage
+Idea:
+
+First in Uzbekistan platform for home bakers to sell their products to clients
 
 Team:
 
@@ -14,4 +16,4 @@ Team:
 
 ## Tech Stack
 
-**React, Typescript, TailwindCSS, Vite, React-router-dom, Shadcn, Vercel.**
+**React, Typescript, TailwindCSS, Redux, Vite, React-router-dom, Shadcn, Vercel.**
