@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { FaGithub, FaInstagram , FaTelegram } from "react-icons/fa";
@@ -42,7 +43,7 @@ const TeamPage = () => {
   return (
     <>
       <Navbar />
-      <h1 className="text-center font-semibold text-2xl mb-6">
+      <h1 className="text-center font-semibold text-2xl mb-6 mt-3">
         Наша Команда
       </h1>
 
@@ -79,6 +80,34 @@ const TeamPage = () => {
           </Card>
         ))}
       </div>
+
+      <div className="w-full flex items-center justify-center mb-6">
+        <h1 className="text-2xl">SPECIAL THANKS</h1>
+      </div>
+      <div className="flex items-center justify-center px-4">
+      <Card className="rounded-2xl shadow-lg p-4 max-w-[500px]">
+            <img
+              src="head/Nigina.png"
+              alt="Nigina"
+              className="w-full h-[460px] object-cover rounded-lg mx-auto mb-4"
+            />
+            <CardContent className="flex flex-col px-8">
+              <h2 className="text-xl font-semibold">Нигина</h2>
+              <p className="text-sm text-muted-foreground">Продюсер, Оператор и Видео-Монтажер</p>
+              <p className="mt-3 text-sm">Единоручно скоординировала весь процесс сьемки видео-презентации, также будучи оператором и видео-монтажерем для него</p>
+              <div className="flex gap-4 mt-4 text-xl">
+                  <a href="https://www.instagram.com/_nishin06/" target="_blank" rel="noopener noreferrer">
+                    <FaInstagram />
+                  </a>
+                  <a href="https://t.me/nini_risuet" target="_blank" rel="noopener noreferrer">
+                    <FaTelegram />
+                  </a>
+              </div>
+            </CardContent>
+          </Card>
+      </div>
+
+      <Footer/>
     </>
   );
 };

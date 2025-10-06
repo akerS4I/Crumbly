@@ -9,6 +9,7 @@ Team:
 - [@akerS4I](https://github.com/akerS4I)
 - [Michael](https://github.com/Michael9Kuzin)
 - [Ruby](https://github.com/Rubi5836)
+- [niSHina](https://www.instagram.com/_nishin06/)
 
 ## Website is live at Varcel
 
