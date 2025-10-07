@@ -93,7 +93,7 @@ const CartPage = () => {
             <span className="text-lg font-semibold">
               Всего товаров: {totalItems}
             </span>
-            <Button variant="secondary" onClick={() => dispatch(clearCart())} className="bg-red-950">
+            <Button variant="destructive" onClick={() => dispatch(clearCart())} className="bg-red-700">
               Очистить корзину
             </Button>
           </div>
